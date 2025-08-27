@@ -260,3 +260,86 @@ Now go to GitHub and create a Pull Request from ft/home-page-redesign into main.
 END OF THE THIRD BUNDLE
 
 ****************************************************************************************************************************************
+
+BUNDLE FOUR
+ 
+Yves-Tabor edited this page last week · 2 revisions
+# Exercise 1 :
+Question :
+
+Checkout the main branch
+Create a new repository on Github
+Using git remote add the repo to your project as second remote named git-copy
+Make a new changes on the home page
+Commit the changes
+Push the changes to the both remotes. the origin and git-copy
+Git Process :
+
+git checkout main : Switches to the main branch of your project.
+
+. Go to GitHub and create a new repository (leave it empty — no README, license, or .gitignore).
+
+git remote add git-copy https://github.com/your-username/your-second-repo.git : Adds the newly
+
+.created GitHub repo as a second remote named git-copy.
+
+echo "
+
+© 2025 Company
+
+" >> index.html : Makes a change to the homepage by adding a footer to index.html.
+git add index.html git commit -m "Add footer to homepage"
+
+git push origin main : Pushes the commit to the original remote repository (origin).
+
+git push git-copy main : Pushes the same commit to the second remote (git-copy).
+
+# Exercise 2 :
+Question :
+
+Checkout a new branch named ft/footer
+Add some changes to the branch and commit them
+Add more changes again to the branch and create a second commit
+Push and create a new PR for the branch
+Checkout the main branch again
+From there create a new branch named ft/squashing
+Using git merge squash, squash the changes on the ft/footer branch
+Commit the changes with a different commit message such as footer changes squashing
+Push the changes and create a PR
+Git Process :
+
+git checkout -b ft/footer : Creates and switches to a new branch named ft/footer.
+
+echo "
+
+Initial footer content
+
+" >> index.html : Adds initial footer content to the homepage.
+git add index.html git commit -m "Add initial footer section"
+
+echo "
+
+Updated footer with contact info
+
+" >> index.html : Adds more content to the same footer section.
+git add index.html git commit -m "Update footer with contact info"
+
+git push -u origin ft/footer : Pushes the ft/footer branch to the remote.
+
+.Now go to GitHub and create a Pull Request from ft/footer into main.
+
+git checkout main : witches back to the main branch.
+
+git checkout -b ft/squashing : Creates and switches to a new branch named ft/squashing from main.
+
+git merge --squash ft/footer : Merges the ft/footer branch into ft/squashing but combines all commits into one.
+
+git commit -m "footer changes squashing" : Commits the squashed changes with a custom message.
+
+git push -u origin ft/squashing : Pushes the new branch to the remote.
+
+.Now go to GitHub and create a PR from ft/squashing into main.
+
+END OF FOURTH BUNDLE
+
+****************************************************************************************************************************************
