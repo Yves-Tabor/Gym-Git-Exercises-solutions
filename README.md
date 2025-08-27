@@ -343,3 +343,67 @@ git push -u origin ft/squashing : Pushes the new branch to the remote.
 END OF FOURTH BUNDLE
 
 ****************************************************************************************************************************************
+
+BUNDLE FIVE
+ 
+Yves-Tabor edited this page last week · 1 revision
+# Exercise 1 :
+Question :
+
+On your Github repo enable Github pages
+Check if the link is publicly visible to anyone
+Git Process :
+
+Let's go to the GitHub repository in your web browser. Open the repository where you want to enable GitHub Pages.
+
+Click on the "Settings" tab. Opens the repository settings.
+
+In the left sidebar, scroll down and click "Pages" (under "Code and automation" or “Pages”). Navigates to the GitHub Pages configuration.
+
+Under "Source", select the branch (e.g. main) and folder (/root if your files are in the main folder). This sets the source for GitHub Pages deployment.
+
+Click "Save". Applies your GitHub Pages configuration.
+
+After saving, GitHub will provide you with a public URL — something like: https://your-username.github.io/your-repo-name/
+
+This is your live GitHub Pages site link.
+
+Open the link in an incognito/private browser window or log out of GitHub and try the link. This ensures that the page is publicly visible and not restricted to your GitHub account.
+If the page loads successfully without requiring a login, then your GitHub Pages site is publicly visible.
+
+# Exercise 2 :
+Question :
+
+Fork this project https://github.com/TheGymRwanda/git-cafe-exercise
+Clone your fork on your machine
+Edit the index.html file
+Change the text Welcome to our place to Welcome to our restaurant
+Commit and push the changes
+Raise a PR to the original Repo
+Git Process :
+
+For example go to https://github.com/TheGymRwanda/git-cafe-exercise and click “Fork" (top-right corner). This creates a copy of the repository under your GitHub account.
+
+Copy the clone URL from your fork (e.g. https://github.com/your-username/git-cafe-exercise.git). This is used to clone your forked repo to your machine.
+
+Run this in your terminal: git clone https://github.com/your-username/git-cafe-exercise.git Clones your forked repository locally (replace with your actual fork URL).
+
+cd git-cafe-exercise Navigates into the project folder.
+
+Open the file index.html in your code editor. Prepares to make your required text change.
+
+Find the text Welcome to our place and change it to Welcome to our restaurant. Updates the greeting message as instructed.
+
+Save the file and return to your terminal: git add index.html Stages the updated file.
+
+git commit -m "Update welcome text to 'Welcome to our restaurant'" Commits the change with a descriptive message.
+
+git push origin main Pushes your change to your forked GitHub repository.
+
+Go to your forked repo on GitHub, and click “Contribute” > “Open pull request”. Starts the process to raise a PR to the original repo.
+
+Review the PR, then click “Create pull request”. Submits your pull request to the original repository for review.
+
+END OF THE FIFTH BUNDLE
+
+*****************************************************************************************************************************************
