@@ -137,3 +137,126 @@ END OF THE SECOND BUNDLE
 
 ***************************************************************************************************************************************
 
+BUNDLE THREE
+ 
+Yves-Tabor edited this page last week · 3 revisions
+# Exercise 1 :
+Question :
+
+Create a new branch named ft/team-page
+Create a new html page named team.html and add some changes
+commit and push those changes
+Create a new PR for the changes
+Go back to main branch (checkout the main branch)
+Create new branch named ft/contact-page
+Go back to the ft/team-page
+With the help of git log look for the last commit and copy its hash
+Checkout again ft/contact-page using git cherry-pick get the changes from the last commit on the ft/team-page branch.
+Add new changes for the contact page and commit, push them
+Create a new PR for the contact page
+From the ft/contact-page branch create a new branch called ft/faq-page
+Create a new faq.html page and add some changes there
+Commit and push those changes
+Using git revert, revert the changes of the last commit of the ft/team-page branch. (use the commit hash you copied earlier)
+Push the changes and create a new PR
+Git Process :
+
+git checkout -b ft/team-page :Creates and switches to a new branch named ft/team-page.
+
+echo "
+
+<title>Team</title>
+Our Team
+" > team.html : Creates a new HTML file team.html with basic content.
+git add team.html git commit -m "Add team.html page"
+
+git push -u origin ft/team-page : Pushes the ft/team-page branch to the remote and sets it as upstream.
+
+. Go to GitHub and create a Pull Request (PR) from ft/team-page into main.
+
+git checkout main : Switches back to the main branch.
+
+git checkout -b ft/contact-page : Creates and switches to a new branch named ft/contact-page.
+
+git checkout ft/team-page : Switches back to the ft/team-page branch.
+
+git log --oneline : Displays a concise list of recent commits. Copy the hash of the last commit (the one for team.html).
+
+git checkout ft/contact-page : Switches back to the ft/contact-page branch.
+
+git cherry-pick : Applies the changes from the last commit in ft/team-page to ft/contact-page. Replace <commit-hash> with the copied hash.
+
+echo "
+
+<title>Contact</title>
+Contact Us
+" > contact.html : Creates a new HTML file contact.html with basic content.
+git add . git commit -m "Add contact.html page"
+
+git push -u origin ft/contact-page : Pushes the ft/contact-page branch to the remote.
+
+.Go to GitHub and create a PR from ft/contact-page into main.
+
+git checkout -b ft/faq-page : Creates and switches to a new branch from ft/contact-page named ft/faq-page.
+
+echo "
+
+<title>FAQ</title>
+Frequently Asked Questions
+" > faq.html : Creates a new HTML file faq.html with basic content.
+git add faq.html git commit -m "Add faq.html page"
+
+git push -u origin ft/faq-page : Pushes the ft/faq-page branch to the remote.
+
+git checkout ft/team-page : Switches back to the ft/team-page branch.
+
+git revert : Reverts the changes of the last commit (used earlier for cherry-pick). Replace <commit-hash> with the actual commit hash.
+
+git push : Pushes the revert commit to the remote repository.
+
+.Go to GitHub and create a PR for the revert commit in ft/team-page.
+
+# Exercise 2 :
+Question :
+
+Create new branch from the ft/faq-page branch named ft/home-page-redesign
+Go back to the main branch and make some changes there
+Commit and push them
+go back to the ft/home-page-redesign branch
+Using git rebase, rebase your branch to main
+Add changes to the home page and commit push them
+Create a PR for the changes.
+Git Process :
+
+git checkout ft/faq-page : Switches to the ft/faq-page branch.
+
+git checkout -b ft/home-page-redesign : Creates a new branch ft/home-page-redesign from ft/faq-page.
+
+git checkout main : Switches back to the main branch.
+
+echo "
+
+New section added to the main branch homepage.
+
+" >> index.html : Simulates a change on the main branch (e.g. homepage update).
+git add index.html git commit -m "Update homepage on main branch"
+
+git push origin main : Pushes the latest commit to the remote main branch.
+
+git checkout ft/home-page-redesign : Switches back to the ft/home-page-redesign branch.
+
+git rebase main : Rebases the ft/home-page-redesign branch onto the latest main changes (linear history).
+
+echo "
+
+Redesigned Home Section
+" >> index.html : Adds new homepage redesign content.
+git add index.html git commit -m "Redesign home page section" : Stages and commits the redesign changes.
+
+git push -u origin ft/home-page-redesign : Pushes the rebased branch to the remote.
+
+Now go to GitHub and create a Pull Request from ft/home-page-redesign into main.
+
+END OF THE THIRD BUNDLE
+
+****************************************************************************************************************************************
