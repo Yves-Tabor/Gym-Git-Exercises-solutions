@@ -407,3 +407,108 @@ Review the PR, then click “Create pull request”. Submits your pull request t
 END OF THE FIFTH BUNDLE
 
 *****************************************************************************************************************************************
+
+BUNDLE SIX
+ 
+Yves-Tabor edited this page last week · 1 revision
+# Exercise 1 :
+Question :
+
+On the git-cafe-exercise repo create a new feature branch
+Add new changes related to a new page named Menu
+Afterward, raise a new PR
+Request review
+GIt Process
+
+git checkout -b ft/menu-page : Creates and switches to a new feature branch named ft/menu-page.
+
+echo "
+
+<title>Menu</title>
+Our Menu
+Delicious food served daily.
+
+" > menu.html Creates a new menu.html file with some sample menu content.
+git add menu.html git commit -m "Add new Menu page"
+
+git push -u origin ft/menu-page : Pushes the new branch to your GitHub fork.
+
+.Go to GitHub and create a new Pull Request (PR) from ft/menu-page into the main branch of the original repository.
+
+.On the PR page, click “Request review” and select one or more collaborators (if available) to review your changes.
+
+# Exercise 2 :
+Question :
+
+Create a new bug fix branch
+From there change the title of the index-4.html file to “Contact”
+Raise a new PR
+Request review
+GIt Process :
+
+git checkout -b fix/contact-page-title : Creates and switches to a new bug fix branch.
+
+.Open the index-4.html file in your code editor.
+
+.Locate the <title> tag and change its content to:
+
+<title>Contact</title> This updates the page title to “Contact”.
+git add index-4.html git commit -m "Fix: change title of index-4.html to 'Contact'"
+
+git push -u origin fix/contact-page-title : Pushes the bug fix branch to your GitHub fork.
+
+.Go to GitHub and create a Pull Request (PR) from fix/contact-page-title into main.
+
+. On the PR page, click “Request review” and select a collaborator (if available) to review your changes.
+
+# Exercise 3 :
+Question :
+
+On the git-cafe-exercise repo, there is a small hot-fix on the contact page
+Change the telephone on the index-4.html page from +1 800 603 6035 to +1 800 659 6035
+GIt Process :
+
+git checkout -b hotfix/contact-phone-update : Creates and switches to a new branch for the hot-fix.
+
+.Open the index-4.html file in your code editor.
+
+.Find the phone number "+1 800 603 6035" and change it to:
+
+"+1 800 659 6035" : This applies the correct contact number as part of the hot-fix.
+
+git add index-4.html git commit -m "Hotfix: update contact phone number on index-4.html" : Stages and commits the updated phone number.
+
+git push -u origin hotfix/contact-phone-update : Pushes the hot-fix branch to your fork on GitHub.
+
+. Go to GitHub and create a Pull Request (PR) from hotfix/contact-phone-update into main.
+
+. Optionally, request a review before merging the PR.
+
+# Exercise 4 :
+Question :
+
+Review two PRs from your peers and request some changes on those PRs —> your peers need to give you access to their repository for you to review them.
+Once, they have adjusted the requested changes, approve and merge that PR.
+GIt Process
+
+Ask your peers to "add you as a collaborator" to their GitHub repositories. This gives you permission to review, comment on, and merge Pull Requests (PRs).
+
+Go to the first peer's GitHub repository and open their open Pull Request (PR). Locate a PR you'd like to review.
+
+Click the “Files changed” tab on the PR. This shows the code that was modified in the PR.
+
+Use the comment feature (click the "+" beside lines) to suggest changes or improvements. Add clear, constructive comments where needed.
+
+At the top-right of the PR, select “Request changes” and submit your review. This tells the author that changes are required before approval.
+
+Repeat steps 2–5 for a second peer’s PR. Completes the task of reviewing two PRs.
+
+Once your peers have made the requested changes, go back to their PRs. Revisit the PRs where you requested changes.
+
+Review the updated code in the Files changed tab to verify the corrections. Ensure that the changes you requested were correctly made.
+
+Submit a new review, this time selecting “Approve”. Confirms that you're satisfied with the final version.
+
+Click “Merge pull request”, then “Confirm merge”. Completes the process by merging the approved PR into the target branch.
+
+END OF THE SIXTH BUNDLE
